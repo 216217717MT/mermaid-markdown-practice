@@ -1,5 +1,7 @@
 mermaid
 i am writing mermaid code
+... mermaid
 flawchart LB 
 A-----B
 C------D
+...
