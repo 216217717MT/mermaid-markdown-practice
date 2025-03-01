@@ -1,6 +1,5 @@
- mermaid
-
-context TD;
+ ```mermaid
+graph TD;
     %% Users
     Client["Client - Books Appointments"] -->|Uses| OnlineBookingSystem
     Barber["Barber - Manages Schedules"] -->|Uses| OnlineBookingSystem
