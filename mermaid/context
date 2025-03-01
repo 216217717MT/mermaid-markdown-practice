@@ -1,0 +1,27 @@
+...
+mermaid 
+
+context TD;
+    %% External Users
+    Client["👤 Client"] -->|Books Appointments| OnlineBookingSystem
+    Barber["💈 Barber"] -->|Manages Schedules| OnlineBookingSystem
+    Admin["🛠️ Admin"] -->|Oversees Operations| OnlineBookingSystem
+
+    %% Main System
+    subgraph "🎯 Online Booking System"
+        OnlineBookingSystem["🖥️ Online Booking System"]
+    end
+
+    %% External Services
+    OnlineBookingSystem -->|Stores Data| BookingDB["🛢️ Booking Database"]
+    OnlineBookingSystem -->|Processes Payments| PaymentService["💳 Payment Service"]
+    OnlineBookingSystem -->|Sends Notifications| NotificationService["📩 Notification Service"]
+
+    %% Styling
+    style OnlineBookingSystem fill:#ff4d4d,stroke:#b30000,stroke-width:2px
+    style BookingDB fill:#66cc66,stroke:#006600,stroke-width:2px
+    style PaymentService fill:#cc66ff,stroke:#6600cc,stroke-width:2px
+    style NotificationService fill:#66cccc,stroke:#008080,stroke-width:2px
+    style Client fill:#4d79ff,stroke:#0033cc,stroke-width:2px
+    style Barber fill:#66cc66,stroke:#006600,stroke-width:2px
+    style Admin fill:#999999,stroke:#4d4d4d,stroke-width:2px
