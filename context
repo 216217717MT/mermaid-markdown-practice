@@ -1,6 +1,6 @@
-
+ mermaid
 ...
-  mermaid
+ Context
 graph TD;
     %% Users
     Client["Client 👤<br>Books Appointments"] -->|Uses| OnlineBookingSystem
