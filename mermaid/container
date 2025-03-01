@@ -1,27 +1,27 @@
 ...
-Mermaid
-container TD;
+mermaid 
+graph TD;
     %% External Users
-    Client["👤 Client<br>Books Appointments"] -->|Uses| WebApp
-    Barber["💈 Barber<br>Manages Schedules"] -->|Uses| WebApp
-    Admin["🛠️ Admin<br>Oversees Operations"] -->|Manages| WebApp
+    Client["Client - Books Appointments"] -->|Uses| WebApp
+    Barber["Barber - Manages Schedules"] -->|Uses| WebApp
+    Admin["Admin - Oversees Operations"] -->|Manages| WebApp
 
     %% Main System Components
-    subgraph "🎯 Online Booking System"
-        WebApp["🌐 Web Application<br>(Frontend)"]
-        API["🔗 API Gateway<br>(Backend)"]
-        MobileApp["📱 Mobile App"]
-        Database["📂 Database"]
+    subgraph "Online Booking System"
+        WebApp["Web Application (Frontend)"]
+        API["API Gateway (Backend)"]
+        MobileApp["Mobile App"]
+        Database["Database"]
     end
 
     %% External Services
     API -->|Stores/Retrieves Data| Database
-    API -->|Processes Payments| PaymentService["💳 Payment Service"]
-    API -->|Sends Notifications| NotificationService["📩 Notification Service"]
+    API -->|Processes Payments| PaymentService["Payment Service"]
+    API -->|Sends Notifications| NotificationService["Notification Service"]
 
     %% Queue Management (Optional)
-    API -->|Handles Booking Requests| BookingQueue["📌 Booking Queue"]
-    API -->|Processes Payment Requests| PaymentQueue["📌 Payment Queue"]
+    API -->|Handles Booking Requests| BookingQueue["Booking Queue"]
+    API -->|Processes Payment Requests| PaymentQueue["Payment Queue"]
 
     %% Styling
     style WebApp fill:#ff4d4d,stroke:#b30000,stroke-width:2px
@@ -35,16 +35,16 @@ container TD;
     style Client fill:#4d79ff,stroke:#0033cc,stroke-width:2px
     style Barber fill:#66cc66,stroke:#006600,stroke-width:2px
     style Admin fill:#999999,stroke:#4d4d4d,stroke-width:2px
+
 ..
-mermaid
-container TD;
+graph TD;
     %% Main System Components
-    Frontend["🖥️ Frontend (Web/Mobile)"] -->|Sends Requests| Backend["🔗 Backend (API Server)"]
+    Frontend["Frontend (Web/Mobile)"] -->|Sends Requests| Backend["Backend (API Server)"]
     
     %% Backend Connections
-    Backend -->|Stores Data| Database["🛢️ Database"]
-    Backend -->|Processes Payments| PaymentService["💳 Payment Service"]
-    Backend -->|Sends Notifications| NotificationService["📩 Notification Service"]
+    Backend -->|Stores Data| Database["Database"]
+    Backend -->|Processes Payments| PaymentService["Payment Service"]
+    Backend -->|Sends Notifications| NotificationService["Notification Service"]
 
     %% Styling
     style Frontend fill:#4d79ff,stroke:#0033cc,stroke-width:2px
