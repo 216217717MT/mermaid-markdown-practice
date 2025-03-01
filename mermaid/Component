@@ -1,6 +1,5 @@
-mermaid 
-...
-component TD;
+```mermaid
+graphTD;
     %% External Users
     Client["Client - Books Appointments"] -->|Interacts with| UI
     Barber["Barber - Manages Schedules"] -->|Interacts with| UI
