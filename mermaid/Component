@@ -1,25 +1,24 @@
-mermaid
+mermaid 
 ...
-Component
-graph TD;
+component TD;
     %% External Users
-    Client["👤 Client<br>Books Appointments"] -->|Interacts with| UI
-    Barber["💈 Barber<br>Manages Schedules"] -->|Interacts with| UI
-    Admin["🛠️ Admin<br>Oversees Operations"] -->|Interacts with| UI
+    Client["Client - Books Appointments"] -->|Interacts with| UI
+    Barber["Barber - Manages Schedules"] -->|Interacts with| UI
+    Admin["Admin - Oversees Operations"] -->|Interacts with| UI
 
     %% Main System Components
-    subgraph "🎯 Online Booking System"
-        UI["🖥️ User Interface (Web & Mobile)"]
-        API["🔗 API Gateway (Backend)"]
+    subgraph "Online Booking System"
+        UI["User Interface (Web & Mobile)"]
+        API["API Gateway (Backend)"]
         
-        subgraph "📂 Backend Services"
-            BookingService["📅 Booking Service"]
-            UserService["🙍‍♂️ User Management Service"]
-            PaymentService["💳 Payment Processing Service"]
-            NotificationService["📩 Notification Service"]
+        subgraph "Backend Services"
+            BookingService["Booking Service"]
+            UserService["User Management Service"]
+            PaymentService["Payment Processing Service"]
+            NotificationService["Notification Service"]
         end
         
-        Database["🛢️ Database"]
+        Database["Database"]
     end
 
     %% Connections
@@ -46,18 +45,4 @@ graph TD;
     style Barber fill:#66cc66,stroke:#006600,stroke-width:2px
     style Admin fill:#999999,stroke:#4d4d4d,stroke-width:2px
 ...
-graph TD;
-    %% System Components
-    Frontend["🖥️ Frontend (Web/Mobile)"] --> Backend["🔗 Backend (API Server)"]
-    
-    %% Backend Connections
-    Backend --> Database["🛢️ Database"]
-    Backend --> Payment["💳 Payment Service"]
-    Backend --> Notification["📩 Notification Service"]
 
-    %% Styling
-    style Frontend fill:#4d79ff,stroke:#0033cc,stroke-width:2px
-    style Backend fill:#ff9933,stroke:#b36b00,stroke-width:2px
-    style Database fill:#66cc66,stroke:#006600,stroke-width:2px
-    style Payment fill:#cc66ff,stroke:#6600cc,stroke-width:2px
-    style Notification fill:#66cccc,stroke:#008080,stroke-width:2px
